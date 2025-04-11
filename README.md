@@ -97,12 +97,6 @@ Frontend will run on:
 
 ---
 
-## 📷 Screenshots
-
-*(Add screenshots here if you'd like, e.g. UI preview)*
-
----
-
 ## 🤝 Author
 
 👩‍💻 Anja Catić  
