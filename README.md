@@ -1,76 +1,109 @@
-# 🎬 FilmLibrary
+# 🎬 Film Library - Full Stack Application
 
-A full-stack web application for browsing and filtering a movie collection. Built with **React** (frontend) and **Spring Boot** + **PostgreSQL** (backend).
+A full-stack movie rental application that allows users to search, filter, sort, and browse movies by genre, rating, title, author, and language.
 
----
-
-## 🔧 Technologies
-
-- **Frontend**: React, CSS Modules
-- **Backend**: Spring Boot, Java, REST API
-- **Database**: PostgreSQL
-
----
-
-## 📁 Project structure
+## 📁 Project Structure
 
 ```
-FilmLibrary/
-├── frontend/   # React app
-├── backend/    # Spring Boot + PostgreSQL
+projekatGit/
+│
+├── frontend/      # React.js frontend
+├── backend/       # Spring Boot backend
+└── README.md      # Project documentation
 ```
 
 ---
 
-## 🚀 Getting Started
+## 🚀 Technologies Used
 
-### 📦 Frontend
+### 🖥️ Frontend
+- **React.js**
+- **CSS Modules**
+- Fetch API for backend communication
+
+### ⚙️ Backend
+- **Java Spring Boot**
+- **Spring Data JPA**
+- **PostgreSQL** (relational database)
+- Custom repository queries for filtering/sorting
+
+---
+
+## 🧪 Features
+
+- 🔍 Search movies by title, author, genre
+- 🎭 Filter by genre via dropdown
+- ⭐ Filter by rating (with slider)
+- 🔃 Sort movies by title, rating, or genre
+- 🗂️ Movie data is dynamically fetched from PostgreSQL via backend
+
+---
+
+## ⚙️ How to Run the Project
+
+### 📦 Backend (Spring Boot)
+
+1. Make sure PostgreSQL is installed and running
+2. Update database credentials in `application.properties`
+3. Navigate to `/backend` folder
+4. Run the app using:
 
 ```bash
-cd frontend
-npm install
-npm start
-```
-
-> Runs the app in development mode at `http://localhost:3000`
-
----
-
-### 🖥 Backend
-
-```bash
-cd backend
 ./mvnw spring-boot:run
 ```
 
-> Runs the backend server at `http://localhost:8080`
-
-Make sure your PostgreSQL database is running and the credentials in `application.properties` are correct.
+Backend will be available at:  
+`http://localhost:8080`
 
 ---
 
-### 🗃 Example `application.properties`
+### 🌐 Frontend (React)
 
-```
-spring.datasource.url=jdbc:postgresql://localhost:5432/filmlibrary
-spring.datasource.username=your_username
-spring.datasource.password=your_password
-spring.jpa.hibernate.ddl-auto=update
-spring.jpa.show-sql=true
-spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
+1. Navigate to `/frontend` folder
+2. Install dependencies:
+
+```bash
+npm install
 ```
 
+3. Start development server:
+
+```bash
+npm start
+```
+
+Frontend will run on:  
+`http://localhost:3000`
+
+> Make sure the backend is running to fetch real movie data!
+
 ---
 
-## ✨ Features
+## 📚 API Endpoints (examples)
 
-- Filter movies by title, genre, and rating
-- Sort movies by title, genre, or rating
-- Responsive UI with CSS modules
-- Backend search and filter with RESTful API
+- `GET /movies` – list all movies  
+- `GET /movies/title/{title}` – search by title  
+- `GET /movies/genre/{genre}` – filter by genre  
+- `GET /movies/rating/{value}` – filter by rating  
+- `GET /movies/sort/title/asc` – sort by title (A-Z)
 
 ---
 
-## 🛡 License
+## 📌 Notes
 
-MIT
+- Project is split into **modular folders** for frontend and backend.
+- All filters and sorters are dynamically connected to backend responses.
+- This project was made as part of a learning journey into full-stack development.
+
+---
+
+## 📷 Screenshots
+
+*(Add screenshots here if you'd like, e.g. UI preview)*
+
+---
+
+## 🤝 Author
+
+👩‍💻 Anja Catić  
+Feel free to reach out or contribute!
